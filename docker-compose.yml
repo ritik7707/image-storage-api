@@ -1,0 +1,11 @@
+services:
+  image-api:
+    build: .
+    container_name: image-storage-api
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./uploads:/app/uploads
+      - ./images.db:/app/images.db
